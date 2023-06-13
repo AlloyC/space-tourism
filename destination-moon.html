@@ -5,33 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Moon
-
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
-
-  Avg. distance
-  384,400 km
-
-  Est. travel time
-  3 days
+<body class="destination | bg-repeat">
+  <header class="main-header | flex">
+    <img src="../starter-code/assets/shared/logo.svg" alt="logo icon" class="logo">
+    <div class="rule">
+    </div>
+    <nav class="nav-bar">
+      <button class="hamburger | hidden">
+      <img src="./assets/shared/icon-hamburger.svg" alt="navigations">
+      </button>
+      <div class="nav-bar-contents">
+        <a href="index.html" id="home" class="| uppercase"><span>00</span> Home</a>
+        <a href="./destination-moon.html" id="destination" class="| uppercase"><span>01</span> Destination</a>
+        <a href="./crew-commander.html" id="crew" class="| uppercase"><span>02</span> Crew</a>
+        <a href="#" id="technology" class="| uppercase"><span>03</span> Technology</a>
+      </div>
+    </nav>
+  </header>
+  <main class="grid">
+    <p class="grid-one | fs-mid"><span class="cl-dark-grayish-blue">01</span> <span class="cl-grayish-blue uppercase">Pick your destination</span></p>
+    <img src="./assets/destination/image-moon.png" alt="" class="destination-img | grid-two">
+    <section id="selection" class="grid-three">
+      <ul class="navigate">
+        <li class="moon"><button id="0" class="cl-grayish-blue fs-small uppercase">Moon</button></li>
+        <li class="mars"><button id="1"  class="cl-grayish-blue fs-small uppercase">Mars</button></li>
+        <li class="europa"><button id="2" class="cl-grayish-blue fs-small uppercase">Europa</button></li>
+        <li class="titan"><button id="3" class="cl-grayish-blue fs-small uppercase">Titan</button></li>
+      </ul>
+      <h1 class="fs-xl | uppercase cl-white">Moon</h1>
+      <p class="paragraph | cl-grayish-blue padding">
+        See our planet as  you’ve never seen it before. A perfect relaxing trip away to help 
+        regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.
+      </p>
+    </section>
+    <aside class="grid-four">
+      <h3 class="aside-grid-one | cl-grayish-blue uppercase">
+        Avg. distance
+      </h3>
+      <h3 class="aside-grid-three | cl-grayish-blue uppercase">
+        Est. travel time
+      </h3>
+      <p class="aside-grid-four | cl-white uppercase grid-four-font">
+        3 days
+      </p>
+      <p class="aside-grid-two | cl-white uppercase grid-four-font">
+        384,400 km
+      </p>
+    </aside>
+  </main>
+  <script src="index.js"></script>
 </body>
 </html>
