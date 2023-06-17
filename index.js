@@ -6,8 +6,9 @@ const selection = document.getElementById('selection');
 const main = document.querySelector('main');
 const BODY = document.querySelector('body');
 const subNAV = document.querySelector('.navigate');
-
 const pageNAV = document.querySelectorAll('.navigate button');
+const toggleHAMBURGER = document.querySelector('.hamburger');
+
 let index;
 let activeNavId;
 let activeNav;
@@ -83,3 +84,16 @@ fetch ('data.json')
         }
     }
 });
+
+toggleHAMBURGER.addEventListener('click', () => {
+    document.querySelector('.nav-bar-contents').classList.toggle('clicked');
+    document.querySelector('.hamburger img').classList.toggle('close');
+    
+    if (!document.querySelector('.nav-bar-contents').classList.contains('clicked')) {
+        document.querySelector('.nav-bar-contents').classList.add('unclicked');
+        document.querySelector('.hamburger img').src = './assets/shared/icon-hamburger.svg'
+    } else {
+        document.querySelector('.nav-bar-contents').classList.remove('unclicked');
+        document.querySelector('.hamburger img').src = './assets/shared/icon-close.svg' 
+    }
+})
